@@ -136,7 +136,8 @@ def negSamplingCostAndGradient(predicted, target, outputVectors, dataset,
     #
     # grad[target] += -sigmoid(-outputVectors[target].dot(predicted))*predicted
 
-    #zafarullah mahmood's code adjusted for o in k
+    # zafarullah mahmood's code adjusted for o in k
+    # https://github.com/zaffnet/cs224n
     u0 = outputVectors[target]
     sample = outputVectors[indices]
     s = sigmoid(-sample.dot(predicted))[None].T
